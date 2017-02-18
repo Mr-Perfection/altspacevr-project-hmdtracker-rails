@@ -21,3 +21,8 @@ Hmd.create([
     announced_at: DateTime.new(2015, 3, 1),
     image_url: "http://i.imgur.com/npqEWje.jpg" },
 ])
+
+HmdState.create([
+  {name: "announced"},
+  {name: "devkit"},
+  {name: "released"}])

@@ -8,7 +8,9 @@
 ## Getting started
 
 '''
-
+$ rake db:migrate #migrate
+$ rake db:seed
+$ rails s
 '''
 
 ## Frameworks

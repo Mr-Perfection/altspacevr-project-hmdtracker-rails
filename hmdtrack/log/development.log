@@ -2388,3 +2388,43 @@ Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2017-02-18 13:12:27 -0800
+
+
+Started GET "/hmds" for ::1 at 2017-02-18 13:42:04 -0800
+Processing by HmdsController#index as HTML
+  [1m[36mHmd Load (0.6ms)[0m  [1mSELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc[0m
+  Rendered hmds/index.html.haml within layouts/application (17.3ms)
+Completed 200 OK in 63ms (Views: 56.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/hmds/3/edit" for ::1 at 2017-02-18 13:44:15 -0800
+Processing by HmdsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mHmd Load (0.5ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  Rendered hmds/edit.html.haml within layouts/application (26.2ms)
+Completed 200 OK in 66ms (Views: 61.6ms | ActiveRecord: 3.0ms)
+
+
+Started PATCH "/hmds/3" for ::1 at 2017-02-18 13:54:51 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XbJqHFJkCfKnjkmE45nCsQXhWt6sqLf8lWIDa1QXg73FnvF4ZUDKSREkA38OqcDePSWCo7Z8hR7AhJ1zUs/X2A==", "hmd"=>{"state"=>"announced"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/hmds
+Completed 302 Found in 31ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/hmds" for ::1 at 2017-02-18 13:54:51 -0800
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (0.5ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  Rendered hmds/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hmds/7/edit" for ::1 at 2017-02-18 13:54:53 -0800
+Processing by HmdsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc[0m
+  Rendered hmds/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.4ms)
