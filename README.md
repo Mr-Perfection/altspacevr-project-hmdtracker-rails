@@ -30,7 +30,7 @@ In this small Rails app, we have a simple `hmds` table which includes all of the
 
 ```
 +---------------------------------------------------
- id           | integer                     | not null default 
+ id           | integer                     | not null default
  name         | character varying(512)      | not null
  company      | character varying(512)      | not null
  state        | character varying(64)       | not null
@@ -60,7 +60,7 @@ For this project, we would like you to change the way this state is stored. Inst
 
 ```
 +---------------------------------------------------------
- id         | integer                     | not null default 
+ id         | integer                     | not null default
  hmd_id     | integer                     | not null
  state      | character varying(64)       | not null
  created_at | timestamp without time zone | not null
@@ -76,7 +76,7 @@ We would like this to be factored in a way to be re-usable. Your final implement
 ```
 class Hmd < ActiveRecord::Base
   include AuditedState
-  
+
   has_audited_state_through :hmd_states, [:announced, :devkit, :released]
 end
 ```
@@ -85,14 +85,14 @@ end
 ```
 class HmdState < ActiveRecord::Base
   include AuditedState
-  
+
   is_audited_state_for :hmd
 end
 ```
 
 This shows how you should be able to wire these two classes together. The `Hmd` class specifies which model to track the `state` attribute through via `has_audited_state_through`, and also specifies what are valid values for the state. Additionally, `HmdState` wires itself in the other direction via `is_audited_state_for`.
 
-You can implement `AuditedState` as a Rails [Concern](http://api.rubyonrails.org/classes/ActiveSupport/Concern.html) and should use Ruby metaprogramming to extend the class's functionality. Here are the requirements for this concern:
+You can implement `AuditedState` as a Rails [Concern](http://api.rubyonrails.org/classes/ActiveSupport/Concern.html) and should use Ruby meta programming to extend the class's functionality. Here are the requirements for this concern:
 
 - `model.state` should initially equal the first valid value (in this example, `:announced`), even if there are no rows in the state table for that model yet.
 
@@ -130,10 +130,8 @@ Feel free to use 3rd party code (gems, libraries) as needed, keeping in mind our
 
 In your repo, you should clobber this README file with your own describing your project. Any instructions or known issues should be documented in the README as well.
 
-E-mail us a link to your Github repo to `projects@altvr.com`. Please include your contact information, and if you haven't submitted it to us already, your resume and cover letter. 
+E-mail us a link to your Github repo to `projects@altvr.com`. Please include your contact information, and if you haven't submitted it to us already, your resume and cover letter.
 
 We hope you have fun working on the project, and we can't wait to see what you come up with!
-    
+
 [The AltspaceVR Team](http://altvr.com/team/)
-
-
