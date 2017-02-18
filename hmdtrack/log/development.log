@@ -2428,3 +2428,53 @@ Processing by HmdsController#edit as HTML
   [1m[36mHmd Load (0.4ms)[0m  [1mSELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc[0m
   Rendered hmds/edit.html.haml within layouts/application (4.7ms)
 Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rift DK1"], ["company", "Oculus VR"], ["state", "released"], ["announced_at", "2012-08-01 00:00:00.000000"], ["image_url", "http://i.imgur.com/EY3KHSz.jpg"], ["created_at", "2017-02-18 21:57:11.928930"], ["updated_at", "2017-02-18 21:57:11.928930"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Rift DK2"], ["company", "Oculus VR"], ["state", "released"], ["announced_at", "2014-03-04 00:00:00.000000"], ["image_url", "http://i.imgur.com/awhOYii.jpg"], ["created_at", "2017-02-18 21:57:11.936226"], ["updated_at", "2017-02-18 21:57:11.936226"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rift CV1"], ["company", "Oculus VR"], ["state", "announced"], ["announced_at", "2015-05-18 00:00:00.000000"], ["image_url", "http://i.imgur.com/Nw077of.jpg"], ["created_at", "2017-02-18 21:57:11.938212"], ["updated_at", "2017-02-18 21:57:11.938212"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Gear VR Innovator Edition"], ["company", "Oculus/Samsung"], ["state", "released"], ["announced_at", "2014-09-03 00:00:00.000000"], ["image_url", "http://i.imgur.com/K1kUWVc.png"], ["created_at", "2017-02-18 21:57:11.939870"], ["updated_at", "2017-02-18 21:57:11.939870"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "OSVR"], ["company", "Razer"], ["state", "devkit"], ["announced_at", "2015-01-05 00:00:00.000000"], ["image_url", "http://i.imgur.com/QSo3WHu.jpg"], ["created_at", "2017-02-18 21:57:11.941682"], ["updated_at", "2017-02-18 21:57:11.941682"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Vive"], ["company", "Valve/HTC"], ["state", "announced"], ["announced_at", "2015-03-01 00:00:00.000000"], ["image_url", "http://i.imgur.com/fuvkUTB.jpg"], ["created_at", "2017-02-18 21:57:11.943366"], ["updated_at", "2017-02-18 21:57:11.943366"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "3D Head"], ["company", "Anakando Media Group"], ["state", "devkit"], ["announced_at", "2015-03-01 00:00:00.000000"], ["image_url", "http://i.imgur.com/npqEWje.jpg"], ["created_at", "2017-02-18 21:57:11.944948"], ["updated_at", "2017-02-18 21:57:11.944948"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rift DK1"], ["company", "Oculus VR"], ["state", "released"], ["announced_at", "2012-08-01 00:00:00.000000"], ["image_url", "http://i.imgur.com/EY3KHSz.jpg"], ["created_at", "2017-02-18 21:57:40.934900"], ["updated_at", "2017-02-18 21:57:40.934900"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Rift DK2"], ["company", "Oculus VR"], ["state", "released"], ["announced_at", "2014-03-04 00:00:00.000000"], ["image_url", "http://i.imgur.com/awhOYii.jpg"], ["created_at", "2017-02-18 21:57:40.942047"], ["updated_at", "2017-02-18 21:57:40.942047"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rift CV1"], ["company", "Oculus VR"], ["state", "announced"], ["announced_at", "2015-05-18 00:00:00.000000"], ["image_url", "http://i.imgur.com/Nw077of.jpg"], ["created_at", "2017-02-18 21:57:40.944106"], ["updated_at", "2017-02-18 21:57:40.944106"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Gear VR Innovator Edition"], ["company", "Oculus/Samsung"], ["state", "released"], ["announced_at", "2014-09-03 00:00:00.000000"], ["image_url", "http://i.imgur.com/K1kUWVc.png"], ["created_at", "2017-02-18 21:57:40.945704"], ["updated_at", "2017-02-18 21:57:40.945704"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "OSVR"], ["company", "Razer"], ["state", "devkit"], ["announced_at", "2015-01-05 00:00:00.000000"], ["image_url", "http://i.imgur.com/QSo3WHu.jpg"], ["created_at", "2017-02-18 21:57:40.947471"], ["updated_at", "2017-02-18 21:57:40.947471"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Vive"], ["company", "Valve/HTC"], ["state", "announced"], ["announced_at", "2015-03-01 00:00:00.000000"], ["image_url", "http://i.imgur.com/fuvkUTB.jpg"], ["created_at", "2017-02-18 21:57:40.949071"], ["updated_at", "2017-02-18 21:57:40.949071"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "hmds" ("name", "company", "state", "announced_at", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "3D Head"], ["company", "Anakando Media Group"], ["state", "devkit"], ["announced_at", "2015-03-01 00:00:00.000000"], ["image_url", "http://i.imgur.com/npqEWje.jpg"], ["created_at", "2017-02-18 21:57:40.950641"], ["updated_at", "2017-02-18 21:57:40.950641"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "hmd_states" ("state", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["state", "announced"], ["created_at", "2017-02-18 21:57:40.957359"], ["updated_at", "2017-02-18 21:57:40.957359"]]
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (1, null, announced, 2017-02-18 21:57:40.957359, 2017-02-18 21:57:40.957359).
+: INSERT INTO "hmd_states" ("state", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

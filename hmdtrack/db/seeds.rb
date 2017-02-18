@@ -23,6 +23,6 @@ Hmd.create([
 ])
 
 HmdState.create([
-  {name: "announced"},
-  {name: "devkit"},
-  {name: "released"}])
+  {state: "announced"},
+  {state: "devkit"},
+  {state: "released"}])
