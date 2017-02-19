@@ -12,4 +12,5 @@ development:
 
 test:
   <<: *default
+  host: localhost
   database: hmdtrack_test

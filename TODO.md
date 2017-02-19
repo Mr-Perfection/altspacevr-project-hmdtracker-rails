@@ -17,6 +17,13 @@ $ rails s
 
 * Frameworks provided by Altspace + ...
 
+## Assumptions
+
+****
+
+**You can set `model.state` to a string or a symbol, and it should work. Reading `model.state` should return a symbol.**
+
+- I made an assumption that model.state is a string for this project. I can simply display symbol in the view by creating a dictionary that matches symbol with state string.
 
 
 
