@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class HmdStateTest < ActiveSupport::TestCase
+class HmdTest < ActiveSupport::TestCase
 
   def setup
     @hmd = Hmd.new(name: "Rift DK1", company: "Oculus VR", state: "released",
@@ -12,6 +12,7 @@ class HmdStateTest < ActiveSupport::TestCase
   test "new hmd_state should be valid" do
     assert @hmd.valid?
   end
-
-
+  # test "new hmd_state should not be valid" do
+  #   assert_not @hmd.valid?
+  # end
 end

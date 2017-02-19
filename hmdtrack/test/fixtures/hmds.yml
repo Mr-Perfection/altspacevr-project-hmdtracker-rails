@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  name: "Rift DK1"
+  company: "Oculus VR"
+  announced_at: <%= DateTime.new(2012, 8, 1)%>
+  state: "released"
+  image_url: "http://i.imgur.com/EY3KHSz.jpg"
+
+failed_one:
+  name: "Rift DK1"
+  company: "Oculus VR"
+  announced_at: <%= DateTime.new(2012, 8, 1)%>
+  state: "$%"
+  image_url: "http://i.imgur.com/EY3KHSz.jpg"
