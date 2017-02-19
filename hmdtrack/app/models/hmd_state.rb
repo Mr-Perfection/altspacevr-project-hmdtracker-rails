@@ -1,6 +1,7 @@
 class HmdState < ActiveRecord::Base
+  include AuditedState
   # state belongs to hmd and update the updated_at when there exists update.
-  belongs_to :hmd, touch: true
+  is_audited_state_for :hmd
 
   # validaitons
 
