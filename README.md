@@ -1,137 +1,65 @@
-# Altspace Programming Project - Rails HMD Tracker
+# HMD Track Coding Challenge
 
-## Instructions
+## Intro
+This project is my implementation for [HMD Track Coding Challenge](https://github.com/Mr-Perfection/altspacevr-project-hmdtracker-rails/blob/master/README_OLD.md) to demonstrate my knowledge and skills in RoR development.
 
-Update an existing Rails project to audit changes to a state table, and then include additional enhancements of your own.
+## Demo
 
-## Goals
+## Assumptions
+* I made an assumption that there is no restriction on hmd_states that belong to hmd model. It means I allowed to have duplicates of states. ex) there will be more than hmd_state that has a same :state attribute with different :created_at attributes. If this is not the case, I can simply create a private method that checks duplicates and put it in :before_create filter.
 
-We use this test to get a sense of your coding style, your Ruby skills, and to how you creatively solve both a concrete problem and an abstract one. When we receive your project, here is what we will be asking ourselves:
-
-- Does the basic functionality of the app work as intended?
-
-- Is the auditing extension (described in Part 1 below) implemented properly?
-
-- Do the enhancements (from Part 2) work well?
-
-- Are the enhancements creative, challenging to implement, and just plain cool?
-
-- Is the code well structured, easy to read and understand, and organized well?
-
-- Fork and clone the repo.
-
-- Inside of the `hmdtrack` folder you'll find a simple rails app you'll be modifying that lets you see a list of upcoming VR HMDs, and edit the state they are in. You'll need to run both `db:migrate` and `db:seed` to populate the initial db.  
-
-# Part 1 - Audited State Transitions
-
-At AltspaceVR, we implement a number of patterns in our Rails stack which are designed to improve auditing and reduce the amount of mutable state in our system. As a general rule, we always perform `INSERTs` and never `UPDATEs` or `DELETEs` in our database. We've added facilities to Rails to let programmers use ActiveRecord models as always, but under the hood tables are appended to not overwritten. You'll be implementing a variant of one of these patterns here.
-
-In this small Rails app, we have a simple `hmds` table which includes all of the information about a small set of VR HMDs. Currently, the table looks like this:
-
-```
-+---------------------------------------------------
- id           | integer                     | not null default
- name         | character varying(512)      | not null
- company      | character varying(512)      | not null
- state        | character varying(64)       | not null
- image_url    | character varying(512)      | not null
- announced_at | timestamp without time zone | not null
- created_at   | timestamp without time zone | not null
- updated_at   | timestamp without time zone | not null
-
-```
-(This is from PostgreSQL, you can use MySQL with this project as well.)
-
-If you hit the app, you'll be presented with a list of HMDs and the state they are in. You can click the `Edit` link to update the state. Here's how this is done in the `hmds_controller.rb`:
-
-```
-  def update
-    @hmd = Hmd.find(params[:id])
-    @hmd.state = params[:hmd][:state]
-    @hmd.save!
-
-    redirect_to hmds_path
+```rb
+  # inside hmd.rb
+  # code is not tested. Just to support how I would approach if my assumption is wrong
+  before_save :check_duplicates
+  # ...
+  def check_duplicates
+    if self.hmd_states.include?(self.state)
+      raise RuntimeError.new('You cannot have a duplicate state')
+    end
   end
 ```
 
-As you can see, the state is updated directly on the table via an `UPDATE` statement to the database.
+## Implementation
+I wrote down what are the basic functionalities that AuditState.rb should perform. Instead of diving into building AuditState.rb and start modulating, I chose to implement those basic requirements from the [Instructions](https://github.com/Mr-Perfection/altspacevr-project-hmdtracker-rails/blob/master/README_OLD.md) in the models. I wrote test cases as I build basic functionalities. Usually, I make commits every time I change certain features but since this is a coding challenge, and project is pretty straightforward, I didn't focus much on writing commit comments.
 
-For this project, we would like you to change the way this state is stored. Instead of storing it on the table directly where it is continually overwritten, it will be stored in a secondary table that will continually have new rows appended whenever the state changes. This ensures that we can have a record of how the state changes over time. This second, initially empty table in the database is called `hmd_states`:
+## AuditedState.rb
+* The most important functionalities in this module are building a custom getter and setter methods for state attribute.
+* Please refer back to my [audited_state.rb](https://github.com/Mr-Perfection/altspacevr-project-hmdtracker-rails/blob/master/hmdtrack/app/models/concerns/audited_state.rb).
 
-```
-+---------------------------------------------------------
- id         | integer                     | not null default
- hmd_id     | integer                     | not null
- state      | character varying(64)       | not null
- created_at | timestamp without time zone | not null
- updated_at | timestamp without time zone | not null
+## Testing
+* I wrote some assertion tests to make sure my models are saving or returning correct values.
 
-```
+## Migration
 
-What we're looking for is a small bit of reusable Rails code which will result in the `state` attribute on the main model (in this case, `Hmd`) reflecting the value of the `state` column of the latest row inserted into this table for that record. Setting the `state` attribute should also result in an insert into this table.
+## Objective
 
-We would like this to be factored in a way to be re-usable. Your final implementations of the two models, `Hmd` and `HmdState` should look like this:
+  **AuditState**
+  1)
+* implement 'AuditState' concern module and basic functionalities(#1 priority).
+  1) `model.state` should initially equal the first valid value (in this example, `:announced`), even if there are no rows in the state table for that model yet. (COMPLETED, initial state is stored in hmd_states collection of hmd)
+  2) `model.state = :new_state` should insert a row into the state table with the value `new_state` in the database, and subsequent calls to `model.state` should return `:new_state` (COMPLETED)
+  3) You can set `model.state` to a string or a symbol, and it should work. Reading `model.state` should return a symbol
+    (COMPLETED, always symbolize the the 'model.state' before save)
+  4) Trying to update `model.state` to an invalid value should raise a validation exception. (COMPLETED)
+  5) Refactor the code into `AuditedState` as a Rail (COMPLETED) [Concern](http://api.rubyonrails.org/classes/ActiveSupport/Concern.html)
 
-`hmd.rb`:
-```
-class Hmd < ActiveRecord::Base
-  include AuditedState
+* Add any enhancements on this application (check the old_README.md for what Altspace expects.) (IN PROGESS)
 
-  has_audited_state_through :hmd_states, [:announced, :devkit, :released]
-end
-```
+## Getting started
 
-`hmd_state.rb`
-```
-class HmdState < ActiveRecord::Base
-  include AuditedState
+'''
+$ rake db:migrate
+$ rake db:seed
+$ rails s
 
-  is_audited_state_for :hmd
-end
-```
+$ rake test # testing
 
-This shows how you should be able to wire these two classes together. The `Hmd` class specifies which model to track the `state` attribute through via `has_audited_state_through`, and also specifies what are valid values for the state. Additionally, `HmdState` wires itself in the other direction via `is_audited_state_for`.
 
-You can implement `AuditedState` as a Rails [Concern](http://api.rubyonrails.org/classes/ActiveSupport/Concern.html) and should use Ruby meta programming to extend the class's functionality. Here are the requirements for this concern:
 
-- `model.state` should initially equal the first valid value (in this example, `:announced`), even if there are no rows in the state table for that model yet.
+git reset HEAD~1 # remove a previous commit
+'''
 
-- `model.state = :new_state` should insert a row into the state table with the value `new_state` in the database, and subsequent calls to `model.state` should return `:new_state`.
+## Frameworks and Tech used
 
-- You can set `model.state` to a string or a symbol, and it should work. Reading `model.state` should return a symbol.
-
-- Trying to update `model.state` to an invalid value should raise a validation exception.
-
-You should **not** need to change the controller code if you've implemented this correctly. By simply making these changes to the two model classes to include and use `AuditedState` you should be seeing rows get inserted into the `hmd_states` table instead of updating the `state` column on the `hmds` table.
-
-For this part of the project, there are a few things we'll be looking for in your submitted repo:
-
-- Your implementation of `audited_state.rb`
-- A small set of unit tests + test fixtures.
-- A migration script to migrate the existing legacy `state` column value into the new `hmd_states` table, and removal of the legacy column.
-
-For this part of the project, please **do not** include additional 3rd party code. You can reference 3rd party code of course, but any code you write for the concern should be your own. (We'll be asking you how it works!)
-
-# Part 2 - HMD Tracker Enhancements
-
-The included app is pretty basic. This second part of the project is more open ended: we'd like you to spend time improving the functionality of the app in a way that showcases your skills and creativity. This is your chance to blow us away!
-
-Some ideas:
-
-- Improve the state auditing library with better efficiency or more features.
-- Update the app to have a more responsive, AJAX-y UX.
-- Add a basic authentication system and a way for users to customize the list.
-- Implement some type of notifications when something changes.
-- Anything you want! Been wanting to play with some new Ruby or JS framework? Use this as an excuse!
-
-Feel free to use 3rd party code (gems, libraries) as needed, keeping in mind our assessment criteria (noted at the top of the README.)
-
-## Deliverable
-
-In your repo, you should clobber this README file with your own describing your project. Any instructions or known issues should be documented in the README as well.
-
-E-mail us a link to your Github repo to `projects@altvr.com`. Please include your contact information, and if you haven't submitted it to us already, your resume and cover letter.
-
-We hope you have fun working on the project, and we can't wait to see what you come up with!
-
-[The AltspaceVR Team](http://altvr.com/team/)
+* Frameworks provided by Altspace + ...

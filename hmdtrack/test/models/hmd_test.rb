@@ -9,42 +9,34 @@ class HmdTest < ActiveSupport::TestCase
   end
 
   test "hmd should be valid" do
-    hmd = Hmd.new(name: "Rift DK1", company: "Oculus VR", state: :released,
-           announced_at: DateTime.new(2012, 8, 1),
-           image_url: "http://i.imgur.com/EY3KHSz.jpg" )
+    hmd = Hmd.new(name: "Rift DK1", company: "Oculus VR",announced_at: DateTime.new(2012, 8, 1),image_url: "http://i.imgur.com/EY3KHSz.jpg" )
     assert hmd.valid?
   end
 
-  test "hmd should not be valid" do
-    hmd = Hmd.new(name: "Rift DK1", company: "Oculus VR", state: "as",
-           announced_at: DateTime.new(2012, 8, 1),
-           image_url: "http://i.imgur.com/EY3KHSz.jpg" )
-    assert_not hmd.valid?
-  end
 
   test "image_url should be present" do
-    hmd = Hmd.new(name: "Rift DK1", company: "Oculus VR", state: "as",
+    hmd = Hmd.new(name: "Rift DK1", company: "Oculus VR",
            announced_at: DateTime.new(2012, 8, 1),
-           image_url: "http" )
+           image_url: nil )
     assert_not hmd.valid?
   end
 
   test "company should be present" do
-    hmd = Hmd.new(name: "Rift DK1", company: nil, state: "as",
+    hmd = Hmd.new(name: "Rift DK1", company: nil,
            announced_at: DateTime.new(2012, 8, 1),
            image_url: "http" )
     assert_not hmd.valid?
   end
 
   test "name should be present" do
-    hmd = Hmd.new(name:  nil, company: "Oculus VR", state: "as",
+    hmd = Hmd.new(name:  nil, company: "Oculus VR",
            announced_at: DateTime.new(2012, 8, 1),
            image_url: "http://i.imgur.com/EY3KHSz.jpg" )
     assert_not hmd.valid?
   end
 
   test "announced_at should be present" do
-    hmd = Hmd.new(name:  "Rift", company: "Oculus VR", state: "as",
+    hmd = Hmd.new(name:  "Rift", company: "Oculus VR",
            announced_at: nil,
            image_url: "http://i.imgur.com/EY3KHSz.jpg" )
     assert_not hmd.valid?
@@ -56,6 +48,11 @@ class HmdTest < ActiveSupport::TestCase
 
   test "hmd states should have hmd id" do
     @hmd_state.hmd_id = nil
+    assert_not @hmd_state.valid?
+  end
+
+  test "hmd states should have an existing state" do
+    @hmd_state.state = nil
     assert_not @hmd_state.valid?
   end
   #

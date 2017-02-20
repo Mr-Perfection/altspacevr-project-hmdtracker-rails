@@ -477,3 +477,2453 @@ HmdStateTest: test_new_hmd_state_should_be_valid
 HmdTest: test_new_hmd_state_should_be_valid
 -------------------------------------------
   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (123.4ms)[0m  [1mDROP DATABASE IF EXISTS "hmdtrack_test"[0m
+  [1m[35m (484.9ms)[0m  CREATE DATABASE "hmdtrack_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (6.2ms)[0m  CREATE TABLE "hmd_states" ("id" serial primary key, "hmd_id" integer NOT NULL, "state" character varying(64) DEFAULT 'announced' NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (6.2ms)[0m  [1mCREATE TABLE "hmds" ("id" serial primary key, "name" character varying(512) NOT NULL, "state" character varying(64) NOT NULL, "company" character varying(512) NOT NULL, "image_url" character varying(512) NOT NULL, "announced_at" timestamp NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150528235540')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150528233405')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------------------------------
+HmdStateTest: test_string_state_should_not_be_valid_in_hmd_state
+----------------------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (0.8ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (0.9ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_not_be_valid
+----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (0.7ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_state_should_not_be_nil
+-------------------------------------
+  [1m[36mHmd Load (1.0ms)[0m  [1mSELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+HmdTest: test_state_should_be_included_in_states
+------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (0.7ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_state_should_not_be_nil
+-------------------------------------
+  [1m[36mHmd Load (0.8ms)[0m  [1mSELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+HmdTest: test_state_should_be_included_in_states
+------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (1.6ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_state_should_not_be_nil
+-------------------------------------
+  [1m[36mHmd Load (0.8ms)[0m  [1mSELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+HmdTest: test_state_should_be_included_in_states
+------------------------------------------------
+  [1m[35mHmd Load (0.9ms)[0m  SELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (0.9ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (1.1ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_state_should_not_be_nil
+-------------------------------------
+  [1m[35mHmd Load (1.6ms)[0m  SELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdTest: test_state_should_be_included_in_states
+------------------------------------------------
+  [1m[36mHmd Load (0.6ms)[0m  [1mSELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdTest: test_state_should_be_included_in_states
+------------------------------------------------
+  [1m[36mHmd Load (0.9ms)[0m  [1mSELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_state_should_not_be_nil
+-------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (0.5ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdTest: test_state_should_be_included_in_states
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_state_should_not_be_nil
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (1.7ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (0.8ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------
+HmdStateTest: test_state_should_not_be_nil
+------------------------------------------
+  [1m[36mHmdState Load (0.8ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states"  ORDER BY "hmd_states"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:10', '2017-02-19 22:55:10', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:55:10, 2017-02-19 22:55:10).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:10', '2017-02-19 22:55:10', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:10', '2017-02-19 22:55:10', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:55:10, 2017-02-19 22:55:10).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:10', '2017-02-19 22:55:10', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:10', '2017-02-19 22:55:10', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:55:10, 2017-02-19 22:55:10).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:10', '2017-02-19 22:55:10', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:42', '2017-02-19 22:55:42', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:55:42, 2017-02-19 22:55:42).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:42', '2017-02-19 22:55:42', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:42', '2017-02-19 22:55:42', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:55:42, 2017-02-19 22:55:42).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:42', '2017-02-19 22:55:42', 980190962)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:42', '2017-02-19 22:55:42', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:55:42, 2017-02-19 22:55:42).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:55:42', '2017-02-19 22:55:42', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:56:51', '2017-02-19 22:56:51', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:56:51, 2017-02-19 22:56:51).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:56:51', '2017-02-19 22:56:51', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:56:51', '2017-02-19 22:56:51', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:56:51, 2017-02-19 22:56:51).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:56:51', '2017-02-19 22:56:51', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:56:51', '2017-02-19 22:56:51', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:56:51, 2017-02-19 22:56:51).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:56:51', '2017-02-19 22:56:51', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:04', '2017-02-19 22:57:04', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:57:04, 2017-02-19 22:57:04).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:04', '2017-02-19 22:57:04', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:05', '2017-02-19 22:57:05', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:57:05, 2017-02-19 22:57:05).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:05', '2017-02-19 22:57:05', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:05', '2017-02-19 22:57:05', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:57:05, 2017-02-19 22:57:05).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:05', '2017-02-19 22:57:05', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:14', '2017-02-19 22:57:14', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:57:14, 2017-02-19 22:57:14).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:14', '2017-02-19 22:57:14', 980190962)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:14', '2017-02-19 22:57:14', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:57:14, 2017-02-19 22:57:14).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:14', '2017-02-19 22:57:14', 980190962)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Insert (0.6ms)[0m  [1mINSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:14', '2017-02-19 22:57:14', 980190962)[0m
+PG::NotNullViolation: ERROR:  null value in column "hmd_id" violates not-null constraint
+DETAIL:  Failing row contains (980190962, null, announced, 2017-02-19 22:57:14, 2017-02-19 22:57:14).
+: INSERT INTO "hmd_states" ("created_at", "updated_at", "id") VALUES ('2017-02-19 22:57:14', '2017-02-19 22:57:14', 980190962)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'released', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 22:57:35', '2017-02-19 22:57:35')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', '$%', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 22:57:35', '2017-02-19 22:57:35')[0m
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'released', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 22:57:48', '2017-02-19 22:57:48')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', '$%', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 22:57:48', '2017-02-19 22:57:48')[0m
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'released', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:00:15', '2017-02-19 23:00:15')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', '$%', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:00:15', '2017-02-19 23:00:15')[0m
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------
+HmdTest: test_hmd_id_should_be_present
+--------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'released', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:00:31', '2017-02-19 23:00:31')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', '$%', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:00:31', '2017-02-19 23:00:31')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------
+HmdTest: test_hmd_id_should_be_present
+--------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'released', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:01:23', '2017-02-19 23:01:23')
+  [1m[36mFixture Insert (0.4ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', '$%', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:01:23', '2017-02-19 23:01:23')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'released', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:01:35', '2017-02-19 23:01:35')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', '$%', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:01:35', '2017-02-19 23:01:35')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'released', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:02:59', '2017-02-19 23:02:59')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', '$%', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:02:59', '2017-02-19 23:02:59')[0m
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'released', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:04:20', '2017-02-19 23:04:20')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', '$%', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:04:20', '2017-02-19 23:04:20')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36mHmd Load (0.5ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'released', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:05:53', '2017-02-19 23:05:53')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', '$%', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:05:53', '2017-02-19 23:05:53')[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_hmd_should_not_be_valid_2
+---------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'released', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:07:47', '2017-02-19 23:07:47')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "state", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', '$%', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-19 23:07:47', '2017-02-19 23:07:47')[0m
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------------
+HmdTest: test_hmd_should_not_be_valid
+-------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (119.9ms)[0m  [1mDROP DATABASE IF EXISTS "hmdtrack_test"[0m
+  [1m[35m (373.5ms)[0m  CREATE DATABASE "hmdtrack_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.3ms)[0m  CREATE TABLE "hmd_states" ("id" serial primary key, "hmd_id" integer NOT NULL, "state" character varying(64) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (4.4ms)[0m  [1mCREATE TABLE "hmds" ("id" serial primary key, "name" character varying(512) NOT NULL, "company" character varying(512) NOT NULL, "image_url" character varying(512) NOT NULL, "announced_at" timestamp NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170220022316')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150528233405')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150528235540')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "hmd_states"[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmds"
+  [1m[36mFixture Insert (0.5ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 02:47:11', '2017-02-20 02:47:11')[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 02:47:11', '2017-02-20 02:47:11')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.5ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 02:50:16', '2017-02-20 02:50:16')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 02:50:16', '2017-02-20 02:50:16')[0m
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.6ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.6ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 02:52:23', '2017-02-20 02:52:23')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 02:52:23', '2017-02-20 02:52:23')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 02:53:30', '2017-02-20 02:53:30')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 02:53:30', '2017-02-20 02:53:30')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.5ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 02:58:34', '2017-02-20 02:58:34')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 02:58:34', '2017-02-20 02:58:34')[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[35mHmd Load (0.7ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:02:42', '2017-02-20 03:02:42')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:02:42', '2017-02-20 03:02:42')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.5ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[35mHmd Load (0.6ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:03:22', '2017-02-20 03:03:22')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:03:22', '2017-02-20 03:03:22')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.5ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.5ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:03:52', '2017-02-20 03:03:52')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:03:52', '2017-02-20 03:03:52')[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:04:09', '2017-02-20 03:04:09')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:04:09', '2017-02-20 03:04:09')[0m
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.7ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:06:23', '2017-02-20 03:06:23')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:06:23', '2017-02-20 03:06:23')[0m
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.5ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.7ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:14:51', '2017-02-20 03:14:51')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:14:51', '2017-02-20 03:14:51')[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:24:53', '2017-02-20 03:24:53')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:24:53', '2017-02-20 03:24:53')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (1.0ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.7ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:25:39', '2017-02-20 03:25:39')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:25:39', '2017-02-20 03:25:39')[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:25:50', '2017-02-20 03:25:50')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:25:50', '2017-02-20 03:25:50')[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:26:25', '2017-02-20 03:26:25')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:26:25', '2017-02-20 03:26:25')[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[35mHmd Load (0.6ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:26:33', '2017-02-20 03:26:33')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:26:33', '2017-02-20 03:26:33')[0m
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[36mHmd Load (0.6ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:27:49', '2017-02-20 03:27:49')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:27:49', '2017-02-20 03:27:49')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:28:29', '2017-02-20 03:28:29')
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:28:29', '2017-02-20 03:28:29')[0m
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.5ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "hmd_states" DISABLE TRIGGER ALL;ALTER TABLE "hmds" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "hmd_states"
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "hmds"[0m
+  [1m[35mFixture Insert (0.4ms)[0m  INSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (1, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:28:45', '2017-02-20 03:28:45')
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "hmds" ("id", "name", "company", "announced_at", "image_url", "created_at", "updated_at") VALUES (2, 'Rift DK1', 'Oculus VR', '2012-08-01 00:00:00.000000', 'http://i.imgur.com/EY3KHSz.jpg', '2017-02-20 03:28:45', '2017-02-20 03:28:45')[0m
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "hmd_states" ENABLE TRIGGER ALL;ALTER TABLE "hmds" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+------------------------------------------------
+HmdStateTest: test_new_hmd_state_should_be_valid
+------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+-------------------------------------------
+HmdTest: test_hmd_states_should_have_hmd_id
+-------------------------------------------
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+HmdTest: test_announced_at_should_be_present
+--------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+-----------------------------------------
+HmdTest: test_image_url_should_be_present
+-----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------
+HmdTest: test_name_should_be_present
+------------------------------------
+  [1m[35mHmd Load (0.5ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+----------------------------------------
+HmdTest: test_hmd_states_should_be_valid
+----------------------------------------
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+------------------------------------------------------
+HmdTest: test_hmd_states_should_have_an_existing_state
+------------------------------------------------------
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+---------------------------------------
+HmdTest: test_company_should_be_present
+---------------------------------------
+  [1m[36mHmd Load (0.2ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+---------------------------------
+HmdTest: test_hmd_should_be_valid
+---------------------------------
+  [1m[35mHmd Load (0.2ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m

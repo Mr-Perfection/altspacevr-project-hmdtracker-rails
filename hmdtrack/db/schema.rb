@@ -11,21 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150528235540) do
+ActiveRecord::Schema.define(version: 20170220022316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "hmd_states", force: :cascade do |t|
-    t.integer  "hmd_id",                                      null: false
-    t.string   "state",      limit: 64, default: "announced", null: false
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
+    t.integer  "hmd_id",                null: false
+    t.string   "state",      limit: 64, null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "hmds", force: :cascade do |t|
     t.string   "name",         limit: 512, null: false
-    t.string   "state",        limit: 64,  null: false
     t.string   "company",      limit: 512, null: false
     t.string   "image_url",    limit: 512, null: false
     t.datetime "announced_at",             null: false

@@ -9,7 +9,6 @@ one:
   name: Rift DK1
   company: Oculus VR
   announced_at: <%= DateTime.new(2012, 8, 1)%>
-  state: released
   image_url: http://i.imgur.com/EY3KHSz.jpg
 
 failed_one:
@@ -17,5 +16,4 @@ failed_one:
   name: Rift DK1
   company: Oculus VR
   announced_at: <%= DateTime.new(2012, 8, 1)%>
-  state: $%
   image_url: http://i.imgur.com/EY3KHSz.jpg
