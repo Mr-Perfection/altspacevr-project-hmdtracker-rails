@@ -22,7 +22,7 @@ git reset HEAD~1
 
 
 ## Assumptions
-* I made an assumption that there is no restriction on hmd_states that belong to hmd model. It means I allowed to have duplicates of states. ex) there will be more than hmd_state that has a same :state attribute with different :created_at attributes. If this is not the case, I can simply create a private method that checks duplicates and put it in :before_create filter.
+* I made an assumption that there is no restriction on hmd_states that belong to hmd model. It means I allow hmd model to have duplicate states. If this assumption is wrong, I can simply create a private method that checks duplicates and put it in :before_create filter.
 
 ```rb
   # inside hmd.rb
