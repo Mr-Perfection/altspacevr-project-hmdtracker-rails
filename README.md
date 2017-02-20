@@ -19,7 +19,7 @@ git reset HEAD~1
 
 
 ## Demo
-
+[ENJOY MY DEMO XD](https://hmdtracksl.herokuapp.com/hmds)
 
 ## Assumptions
 * I made an assumption that there is no restriction on hmd_states that belong to hmd model. It means I allow hmd model to have duplicate states. If this assumption is wrong, I can simply create a private method that checks duplicates and put it in `:before_create` filter.
