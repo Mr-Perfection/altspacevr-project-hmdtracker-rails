@@ -1,4 +1,4 @@
-Hmd.create([
+Hmd.create!([
   { name: "Rift DK1", company: "Oculus VR", state: "released",
     announced_at: DateTime.new(2012, 8, 1),
     image_url: "http://i.imgur.com/EY3KHSz.jpg" },

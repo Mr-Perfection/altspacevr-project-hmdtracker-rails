@@ -9,7 +9,9 @@ module AuditedState
 
       # create a attribute accessor for current state
       attr_accessor :current_state
-      
+      # create a class attribute for allowed states
+      class_attribute :allowed_states
+      self.allowed_states = states
       # Hmd has many states from [:announced, :devkit, :released]
       has_many models, dependent: :destroy
 
@@ -23,7 +25,9 @@ module AuditedState
       validates :company, presence: true
       validates :image_url, presence: true
       validates :announced_at, presence: true
-      validates_inclusion_of :current_state, in: states
+      validates :current_state, presence: true
+      # validates_inclusion_of :current_state, in: states
+      validate :current_state_with_exception
     end
 
 
@@ -51,7 +55,14 @@ module AuditedState
     # Also, update the current_state to new_state
     def state=(new_state)
       self.hmd_states.build(state: new_state)
-      self.current_state = new_state
+      self.current_state = new_state.to_sym
+    end
+
+    def current_state_with_exception
+      allowed_states = self.class.allowed_states
+      unless allowed_states.include?(self.current_state)
+        raise RuntimeError.new('State is either invalid or not allowed. Pick one from ' + allowed_states.join(','))
+      end
     end
   end
 

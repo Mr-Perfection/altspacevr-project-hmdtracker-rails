@@ -42161,3 +42161,507 @@ ActiveRecord::RecordInvalid (Validation failed: Current state is not included in
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "devkit"], ["hmd_id", 1], ["created_at", "2017-02-20 03:35:23.381336"], ["updated_at", "2017-02-20 03:35:23.381336"]]
   [1m[35mSQL (0.3ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 03:35:23.383032' WHERE "hmds"."id" = $1  [["id", 1]]
   [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2017-02-19 20:47:50 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/hmds
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/hmds" for ::1 at 2017-02-19 20:47:51 -0800
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (1.5ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.7ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.4ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.4ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.4ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 4]]
+  [1m[35mHmdState Load (0.5ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 2]]
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 1]]
+  Rendered hmds/index.html.haml within layouts/application (105.3ms)
+Completed 200 OK in 319ms (Views: 300.9ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/hmds/3/edit" for ::1 at 2017-02-19 20:47:53 -0800
+Processing by HmdsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mHmd Load (0.4ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 3]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 6]]
+  [1m[35mHmdState Load (0.3ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 7]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 5]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 4]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 2]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 1]]
+  Rendered hmds/edit.html.haml within layouts/application (26.5ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/hmds/3" for ::1 at 2017-02-19 20:47:55 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHEoMobpnQlggsD5rOID20npVCxPImZayGa6cYFApWPvYcDTLXZdBLnxOk7Hv823AFtKhGvJKOwvGRPUFWE5ZQ==", "hmd"=>{"state"=>"devkit"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 42ms (ActiveRecord: 0.9ms)
+
+ActiveRecord::RecordInvalid (Validation failed: Current state is not included in the list):
+  app/controllers/hmds_controller.rb:13:in `update'
+
+
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.1ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (57.2ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (156.5ms)
+
+
+Started PATCH "/hmds/3" for ::1 at 2017-02-19 20:50:14 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHEoMobpnQlggsD5rOID20npVCxPImZayGa6cYFApWPvYcDTLXZdBLnxOk7Hv823AFtKhGvJKOwvGRPUFWE5ZQ==", "hmd"=>{"state"=>"devkit"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 422 Unprocessable Entity in 29ms (ActiveRecord: 5.2ms)
+
+ActiveRecord::RecordInvalid (Validation failed: Current state is not included in the list):
+  app/controllers/hmds_controller.rb:13:in `update'
+
+
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.7ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (87.2ms)
+
+
+Started PATCH "/hmds/3" for ::1 at 2017-02-19 20:56:39 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yHEoMobpnQlggsD5rOID20npVCxPImZayGa6cYFApWPvYcDTLXZdBLnxOk7Hv823AFtKhGvJKOwvGRPUFWE5ZQ==", "hmd"=>{"state"=>"devkit"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "devkit"], ["hmd_id", 3], ["created_at", "2017-02-20 04:56:39.192939"], ["updated_at", "2017-02-20 04:56:39.192939"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 04:56:39.194588' WHERE "hmds"."id" = $1  [["id", 3]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/hmds
+Completed 302 Found in 24ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/hmds" for ::1 at 2017-02-19 20:56:39 -0800
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (0.4ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.5ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.4ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.3ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 4]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 2]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 1]]
+  Rendered hmds/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/hmds" for ::1 at 2017-02-19 20:56:40 -0800
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (0.4ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.4ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 4]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 2]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 1]]
+  Rendered hmds/index.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/hmds/3/edit" for ::1 at 2017-02-19 20:56:41 -0800
+Processing by HmdsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mHmd Load (0.4ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 3]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 6]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 7]]
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 5]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 4]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 2]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 1]]
+  Rendered hmds/edit.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/hmds/3" for ::1 at 2017-02-19 20:56:43 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HJmeE24FxYzdJDTtowi3SWjK8dH1qkzge1YUIGIwlkg7iXbyxZoFgQRXzlrIVXklIXjvedFBAlacKb2F9hEKTg==", "hmd"=>{"state"=>"announced"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "announced"], ["hmd_id", 3], ["created_at", "2017-02-20 04:56:43.831762"], ["updated_at", "2017-02-20 04:56:43.831762"]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 04:56:43.833506' WHERE "hmds"."id" = $1  [["id", 3]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/hmds
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/hmds" for ::1 at 2017-02-19 20:56:43 -0800
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (0.7ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 4]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 2]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 1]]
+  Rendered hmds/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/hmds/3/edit" for ::1 at 2017-02-19 20:56:45 -0800
+Processing by HmdsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mHmd Load (0.7ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 3]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 6]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 7]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 5]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 4]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 2]]
+  [1m[35mHmdState Load (0.3ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 1]]
+  Rendered hmds/edit.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/hmds/3" for ::1 at 2017-02-19 20:56:47 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1eHFfYj0G4cqtQpxcKlk+QZMsn3xin4Hiau1G9CxrBDy8S2cI2vbivPG8MYb9KqVT/6s1dVhMLFu1By+RJAwFg==", "hmd"=>{"state"=>"released"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "released"], ["hmd_id", 3], ["created_at", "2017-02-20 04:56:47.417570"], ["updated_at", "2017-02-20 04:56:47.417570"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 04:56:47.419003' WHERE "hmds"."id" = $1  [["id", 3]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/hmds
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/hmds" for ::1 at 2017-02-19 20:56:47 -0800
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (0.4ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 4]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 2]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 1]]
+  Rendered hmds/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 1.8ms)
+  [1m[36mHmd Load (1.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "devk"], ["hmd_id", 1], ["created_at", "2017-02-20 04:57:13.757461"], ["updated_at", "2017-02-20 04:57:13.757461"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 04:57:13.761231' WHERE "hmds"."id" = $1  [["id", 1]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mHmd Load (0.5ms)[0m  SELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["state", "devk"], ["hmd_id", 1], ["created_at", "2017-02-20 04:57:55.023853"], ["updated_at", "2017-02-20 04:57:55.023853"]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "hmds" SET "updated_at" = '2017-02-20 04:57:55.026197' WHERE "hmds"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36mHmdState Load (0.5ms)[0m  [1mSELECT "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1[0m  [["hmd_id", 1]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "devk"], ["hmd_id", 1], ["created_at", "2017-02-20 04:59:33.451580"], ["updated_at", "2017-02-20 04:59:33.451580"]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 04:59:33.453714' WHERE "hmds"."id" = $1  [["id", 1]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "devk"], ["hmd_id", 1], ["created_at", "2017-02-20 05:01:12.847756"], ["updated_at", "2017-02-20 05:01:12.847756"]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 05:01:12.849543' WHERE "hmds"."id" = $1  [["id", 1]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "devk"], ["hmd_id", 1], ["created_at", "2017-02-20 05:03:41.633004"], ["updated_at", "2017-02-20 05:03:41.633004"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 05:03:41.634398' WHERE "hmds"."id" = $1  [["id", 1]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[36mHmd Load (1.0ms)[0m  [1mSELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mHmd Load (1.0ms)[0m  [1mSELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mHmd Load (0.3ms)[0m  SELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mHmd Load (0.6ms)[0m  [1mSELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mHmd Load (0.7ms)[0m  SELECT  "hmds".* FROM "hmds"  ORDER BY "hmds"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+
+
+Started GET "/hmds" for ::1 at 2017-02-19 21:13:25 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (1.4ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.5ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.5ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.3ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mHmdState Load (0.4ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 4]]
+  [1m[35mHmdState Load (0.5ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 2]]
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 1]]
+  Rendered hmds/index.html.haml within layouts/application (58.9ms)
+Completed 200 OK in 249ms (Views: 225.0ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/hmds/3/edit" for ::1 at 2017-02-19 21:13:27 -0800
+Processing by HmdsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mHmd Load (0.4ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 3]]
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 6]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 7]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 5]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 4]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 2]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 1]]
+  Rendered hmds/edit.html.haml within layouts/application (18.1ms)
+Completed 200 OK in 60ms (Views: 57.2ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/hmds/3" for ::1 at 2017-02-19 21:13:30 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ac7XyuG6EfXQE6xpdHncMyvwrQ4feTwBeTvBIRqI7g8m3j8rSiXR+AlgVt4fJBJfYkKzpjuScreeRGiEjqlyCQ==", "hmd"=>{"state"=>"devkit"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+RuntimeError (State is either invalid or not allowed. Pick one from announced,devkit,released):
+  app/models/concerns/audited_state.rb:64:in `current_state_with_exception'
+  app/controllers/hmds_controller.rb:13:in `update'
+
+
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.5ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.7ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (103.6ms)
+
+
+Started PATCH "/hmds/3" for ::1 at 2017-02-19 21:14:07 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9S0s4H13DdT3W0MNpYrmDTuA88hT+NJ2oJmtEuSI/YrSPcQB1ujN2S4oubrO1yhhcjLtYHcTnMBH5gS3cKlhjA==", "hmd"=>{"state"=>"announced"}, "commit"=>"Update", "id"=>"3"}
+  [1m[35mHmd Load (0.4ms)[0m  SELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
+
+RuntimeError (State is either invalid or not allowed. Pick one from announced,devkit,released):
+  app/models/concerns/audited_state.rb:64:in `current_state_with_exception'
+  app/controllers/hmds_controller.rb:13:in `update'
+
+
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (38.8ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/StephenLee/.rvm/gems/ruby-2.3.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (87.2ms)
+
+
+Started PATCH "/hmds/3" for ::1 at 2017-02-19 21:14:38 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9S0s4H13DdT3W0MNpYrmDTuA88hT+NJ2oJmtEuSI/YrSPcQB1ujN2S4oubrO1yhhcjLtYHcTnMBH5gS3cKlhjA==", "hmd"=>{"state"=>"announced"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mHmd Load (0.3ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "announced"], ["hmd_id", 3], ["created_at", "2017-02-20 05:14:38.145791"], ["updated_at", "2017-02-20 05:14:38.145791"]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 05:14:38.147255' WHERE "hmds"."id" = $1  [["id", 3]]
+  [1m[36m (2.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/hmds
+Completed 302 Found in 25ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/hmds" for ::1 at 2017-02-19 21:14:38 -0800
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (0.8ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 4]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 2]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 1]]
+  Rendered hmds/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/hmds/3/edit" for ::1 at 2017-02-19 21:14:40 -0800
+Processing by HmdsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mHmd Load (0.4ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 3]]
+  [1m[36mHmdState Load (0.4ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 6]]
+  [1m[35mHmdState Load (0.3ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 7]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 5]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 4]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 2]]
+  [1m[35mHmdState Load (0.4ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 1]]
+  Rendered hmds/edit.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 2.5ms)
+
+
+Started PATCH "/hmds/3" for ::1 at 2017-02-19 21:14:42 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Id5l5fxUq6LuwpBq8e/S8nxc+iOsvNDcN/Afm+JjoS8Gzo0EV8trrzexat2ashyeNe7ki4hXnmrQj7Y+dkI9KQ==", "hmd"=>{"state"=>"devkit"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "devkit"], ["hmd_id", 3], ["created_at", "2017-02-20 05:14:42.329458"], ["updated_at", "2017-02-20 05:14:42.329458"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 05:14:42.330481' WHERE "hmds"."id" = $1  [["id", 3]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/hmds
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/hmds" for ::1 at 2017-02-19 21:14:42 -0800
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (0.4ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.4ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.4ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 4]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 2]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 1]]
+  Rendered hmds/index.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/hmds/6/edit" for ::1 at 2017-02-19 21:15:28 -0800
+Processing by HmdsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mHmd Load (0.5ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.3ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 6]]
+  [1m[35mHmdState Load (0.3ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 7]]
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 5]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 4]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 2]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 1]]
+  Rendered hmds/edit.html.haml within layouts/application (22.8ms)
+Completed 200 OK in 52ms (Views: 42.2ms | ActiveRecord: 5.9ms)
+
+
+Started PATCH "/hmds/6" for ::1 at 2017-02-19 21:15:30 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mxjLpkCE/8hCPUOQEHGJxGAUgptRzUY/kxvFQ0T+rw68CCNH6xs/xZtOuSd7LEeoKaacM3UmCIl0ZGzm0N8zCA==", "hmd"=>{"state"=>"released"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "released"], ["hmd_id", 6], ["created_at", "2017-02-20 05:15:30.796932"], ["updated_at", "2017-02-20 05:15:30.796932"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 05:15:30.798093' WHERE "hmds"."id" = $1  [["id", 6]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/hmds
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/hmds" for ::1 at 2017-02-19 21:15:30 -0800
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (0.4ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mHmdState Load (0.5ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 4]]
+  [1m[35mHmdState Load (0.4ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 2]]
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 1]]
+  Rendered hmds/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/hmds/5/edit" for ::1 at 2017-02-19 21:15:32 -0800
+Processing by HmdsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mHmd Load (0.9ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.3ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 5]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 4]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 2]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 1]]
+  Rendered hmds/edit.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 2.5ms)
+
+
+Started PATCH "/hmds/5" for ::1 at 2017-02-19 21:15:35 -0800
+Processing by HmdsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lQANe633wUYkXTo5/efPfkL5yA4BMFYThZaX1G0got2yEOWaBmgBS/0uwI6WugESC0vWpiXbGKVi6T5x+QE+2w==", "hmd"=>{"state"=>"announced"}, "commit"=>"Update", "id"=>"5"}
+  [1m[36mHmd Load (0.4ms)[0m  [1mSELECT  "hmds".* FROM "hmds" WHERE "hmds"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "hmd_states" ("state", "hmd_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["state", "announced"], ["hmd_id", 5], ["created_at", "2017-02-20 05:15:35.229779"], ["updated_at", "2017-02-20 05:15:35.229779"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "hmds" SET "updated_at" = '2017-02-20 05:15:35.230786' WHERE "hmds"."id" = $1  [["id", 5]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/hmds
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/hmds" for ::1 at 2017-02-19 21:15:35 -0800
+Processing by HmdsController#index as HTML
+  [1m[35mHmd Load (0.5ms)[0m  SELECT "hmds".* FROM "hmds"  ORDER BY announced_at desc, name desc
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 3]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 6]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 7]]
+  [1m[35mHmdState Load (0.2ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 5]]
+  [1m[36mHmdState Load (0.2ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 4]]
+  [1m[35mHmdState Load (0.4ms)[0m  SELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1  [["hmd_id", 2]]
+  [1m[36mHmdState Load (0.4ms)[0m  [1mSELECT  "hmd_states".* FROM "hmd_states" WHERE "hmd_states"."hmd_id" = $1  ORDER BY "hmd_states"."id" DESC LIMIT 1[0m  [["hmd_id", 1]]
+  Rendered hmds/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 2.2ms)
