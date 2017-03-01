@@ -1,5 +1,7 @@
 # HMD Track Coding Challenge
 
+## UPDATE: I was invited to do the on-site interview after the coding challenge.
+
 ## Intro
 This project is my implementation for [HMD Track Coding Challenge](https://github.com/Mr-Perfection/altspacevr-project-hmdtracker-rails/blob/master/README_OLD.md) to demonstrate my knowledge and skills in RoR development.
 
